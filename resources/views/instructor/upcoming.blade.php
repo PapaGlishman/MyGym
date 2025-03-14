@@ -21,7 +21,7 @@
                             <p class="text-sm">{{ $class->date_time->format('jS M') }}</p>
                             </div>
                         </div>
-                        {{--  @can('delete', $class)  --}}
+                        @can('delete', $class)
                         <div class="mt-1 text-right">
                             <form method="POST" action="{{ route('schedule.destroy', $class) }}">
                             @csrf
@@ -29,7 +29,7 @@
                             <x-danger-button class="px-3 py-1">Cancel</x-danger-button>
                             </form>
                         </div>
-                        {{--  @endcan  --}}
+                        @endcan
                     </div>
                     @empty
                     <div>
